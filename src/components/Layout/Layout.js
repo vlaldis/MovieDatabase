@@ -2,7 +2,8 @@
 import { Stack } from '@mui/material'
 import { AppHeader } from './AppHeader/AppHeader'
 
-export const Layout = (children) =>
+export const Layout = ({ children }) =>
   <Stack>
     <AppHeader />
+    {children}
   </Stack>
