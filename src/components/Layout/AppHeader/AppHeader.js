@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AppBar, IconButton, Button, Typography, Toolbar, Menu, MenuItem } from '@mui/material'
 import MovieFilterIcon from '@mui/icons-material/MovieFilter'
 import MenuIcon from '@mui/icons-material/Menu'
+import { Link } from 'react-router-dom'
 
 export const AppHeader = () => {
   const [anchorEl, setAnchorEl] = useState(null)
@@ -37,8 +38,8 @@ export const AppHeader = () => {
           horizontal: 'left'
         }}
       >
-        <MenuItem>Search</MenuItem>
-        <MenuItem>Favourites</MenuItem>
+        <MenuItem component={Link} to='/'>Search</MenuItem>
+        <MenuItem component={Link} to='favourites'>Favourites</MenuItem> {/* todo this does not exist */}
       </Menu>
     </>
   )
